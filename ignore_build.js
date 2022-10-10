@@ -18,7 +18,7 @@ function run_diff() {
     return;
   }
 
-  exec(`git diff ${CACHED_COMMIT_REF} ${$COMMIT_REF} -- dist`, (error) => {
+  exec(`git diff ${CACHED_COMMIT_REF} ${COMMIT_REF} -- dist`, (error) => {
     if (error) {
       log(`Git diff returned ${error.code}`);
       process.exitCode = 1;
